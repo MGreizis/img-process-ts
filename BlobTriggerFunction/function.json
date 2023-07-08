@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "processingblob/input-images",
+      "connection": "DefaultEndpointsProtocol=https;AccountName=processingblob;AccountKey=CApW7bzZPEsnR1x/xuaXVKMM+XdyB3ou7j5mw+paslsKH+wODr1OsPIuBeBXojx9DlgGgBd0Iem5+AStUUE7Lg==;EndpointSuffix=core.windows.net"
+    },
+    {
+      "name": "outputBlob",
+      "type": "blob",
+      "path": "processingblob/output-images",
+      "connection": "DefaultEndpointsProtocol=https;AccountName=processingblob;AccountKey=CApW7bzZPEsnR1x/xuaXVKMM+XdyB3ou7j5mw+paslsKH+wODr1OsPIuBeBXojx9DlgGgBd0Iem5+AStUUE7Lg==;EndpointSuffix=core.windows.net",
+      "direction": "out"
+    }
+  ],
+  "scriptFile": "../dist/BlobTriggerFunction/index.js",
+  "entryPoint": "blobTrigger"
+}
